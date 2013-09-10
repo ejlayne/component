@@ -1,5 +1,8 @@
 Component::Application.routes.draw do
   resources :users
+  resources :contributors
+  resources :owners
+  resources :profiles
 
   root :to => "home#index"
   get '/', to: 'home#index', as: :home

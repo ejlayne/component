@@ -1,0 +1,18 @@
+<p>
+  <strong>Username:</strong>
+  <%= @owner.username%>
+</p>
+ 
+<p>
+  <strong>Password:</strong>
+  <%= @owner.password%>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @owner.email%>
+</p>
+
+<%= link_to "Create Profile", new_profile_path if @owner.profile_id %>
+
+<%= link_to "Owners Home", owners_path %>

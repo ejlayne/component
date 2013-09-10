@@ -11,12 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130903060512) do
+ActiveRecord::Schema.define(version: 20130910055938) do
+
+  create_table "pages", force: true do |t|
+    t.integer "user_id"
+    t.string  "page_title"
+    t.string  "contact_info"
+    t.string  "business_desc"
+  end
+
+  create_table "profiles", force: true do |t|
+    t.integer  "user_id"
+    t.string   "contact_info"
+    t.string   "experience"
+    t.string   "pref_languages"
+    t.string   "pref_task_types"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "username"
     t.string   "password"
     t.string   "email"
+    t.string   "type"
+    t.integer  "profile_id"
+    t.integer  "page_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

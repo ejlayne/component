@@ -1,0 +1,19 @@
+<h1>Hello Contributors!</h1>
+
+<h1>Contributors</h1>
+ 
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Email</th>
+  </tr>
+ 
+  <% @contributors.each do |contributor| %>
+    <tr>
+      <td><%= link_to contributor.username, contributor_path(contributor) %></td>
+      <td><%= contributor.email %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "New Contributor", new_contributor_path %>

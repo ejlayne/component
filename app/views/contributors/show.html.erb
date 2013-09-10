@@ -1,0 +1,18 @@
+<p>
+  <strong>Username:</strong>
+  <%= @contributor.username%>
+</p>
+ 
+<p>
+  <strong>Password:</strong>
+  <%= @contributor.password%>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contributor.email%>
+</p>
+
+<%= link_to "Create Profile", new_profile_path if @contributor.profile_id %>
+
+<%= link_to "Contributors Home", contributors_path %>

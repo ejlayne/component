@@ -1,0 +1,3 @@
+class Contributor < User
+  
+end
