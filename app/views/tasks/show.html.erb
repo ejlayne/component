@@ -1,0 +1,16 @@
+<p>
+  <strong>Task Name:</strong>
+  <%= @task.name%>
+</p>
+ 
+<p>
+  <strong>Task Requirements:</strong>
+  <%= @task.requirements%>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @task.owner_name%>
+</p>
+
+<%= link_to "Tasks Home", tasks_path %>

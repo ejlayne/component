@@ -3,12 +3,16 @@ Component::Application.routes.draw do
   resources :contributors
   resources :owners
   resources :profiles
+  resources :sessions
+  resources :tasks
 
   root :to => "home#index"
   get '/', to: 'home#index', as: :home
 
   get 'users/index'
-
+  
+  get 'login' => 'sessions#new', as: 'login'
+  get 'logout' => 'sessions#destroy', as: 'logout'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

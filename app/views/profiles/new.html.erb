@@ -1,0 +1,26 @@
+<%= form_for :profile, url: profiles_path do |f| %>
+
+  <p>
+    <%= f.label :contact_info %><br>
+    <%= f.text_field :contact_info %>
+  </p>
+ 
+  <p>
+    <%= f.label :experience %><br>
+    <%= f.text_area :experience %>
+  </p>
+ 
+  <p>
+    <%= f.label :pref_languages %><br>
+    <%= f.text_area :pref_languages %>
+  </p>
+  
+  <p>
+    <%= f.label :pref_task_types %><br>
+    <%= f.text_area :pref_task_types %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

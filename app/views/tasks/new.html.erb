@@ -1,0 +1,20 @@
+<%= form_for :task, url: tasks_path do |f| %>
+  <p>
+    <%= f.label "Task Name" %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :requirements %><br>
+    <%= f.text_area :requirements %>
+  </p>
+  
+  <p>
+    <%= f.hidden_field :owner_id, :value => params[:owner] %>
+  </p>
+ 
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -13,6 +13,10 @@
   <%= @owner.email%>
 </p>
 
+<%= render partial: "helpers/task_list", locals: {:tasks => @owner.owner_tasks}%>
+
 <%= link_to "Create Profile", new_profile_path if @owner.profile_id %>
+
+<%= link_to "Create Task", new_task_path(:owner => @owner) %>
 
 <%= link_to "Owners Home", owners_path %>

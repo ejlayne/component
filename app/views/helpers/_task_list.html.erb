@@ -1,0 +1,19 @@
+<h1>Tasks</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Owner Name</th>
+    <th>Contributor Name</th>
+    <th>Delete Task?</th>
+  </tr>
+ 
+  <% tasks.each do |task| %>
+    <tr>
+      <td><%= link_to task.name, task_path(task) %></td>
+      <td><%= task.owner_name %></td>
+      <td><%= task.contributor_name if task.contributor_id %></td>
+      <td><%= link_to "Delete", task_path(task), :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>

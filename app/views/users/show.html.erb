@@ -13,4 +13,11 @@
   <%= @user.email%>
 </p>
 
+<% if @user.profile %>
+<%= render "profile" %>
+<% #else %>
+<%#= link_to "Create Profile", new_profile_path(:user_id => @user.id) 
+%>
+<% end %>
+
 <%= link_to "Users Home", users_path %>
